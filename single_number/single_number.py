@@ -4,12 +4,12 @@ Returns: an integer
 '''
 list1 = [2,2,3,3,4,4,5,5,6,7,7,8,8]
 
-# def single_number(arr):
-# 	for x in arr:
-# 		if arr.count(x) == 1:
-# 			return x
+def single_number(arr):
+	for x in arr:
+		if arr.count(x) == 1:
+			return x
 
-# print(single_number(list1))
+print(single_number(list1))
 
 s = set() # O(1)
 
