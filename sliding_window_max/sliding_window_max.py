@@ -2,11 +2,27 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
+output = [] 
 def sliding_window_max(nums, k):
-    # Your code here
+    # print(len(nums) - 1)
+    a = k - k
+    win = nums[a:k]
+    endOfNums = nums[len(nums) - 1]
+    # print(endOfNums)
+    endOfwin = win[len(win) - 1]
+    # print(endOfwin)
 
-    pass
-
+    if endOfNums == len(win) - 1:
+        # print('end of nums', output) 
+        return output
+    else:
+        output.append(max(win))
+        # print(output)
+        a += 1
+        k += 1
+        # print(a, k)
+    return sliding_window_max(nums, k)
+    
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
